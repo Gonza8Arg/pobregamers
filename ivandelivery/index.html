@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8"/>
+    <script type="module" src="modules/game.js"></script>
+    <template id="game-over-template">
+        <div class="game-overlay">
+            <h2>Ivan Delivery!!!</h2>
+            <p></p>
+            <h2>Nivel <span id=lnum></span></h2>
+            <button>Reiniciar</button> 
+        </div>
+    </template>
+    <template id="title-template">
+        <div class="game-overlay">
+            <h2>IVAN DELIVERY</h2>
+            <p>Agarrá las <em>pizzas</em> antes que se enfrien</p>
+            <p>Manejá con las <em>flechitas</em> o con <em>WASD</em></p>
+            <h2 hidden>LEVEL: <input type="number" value=1 name="level" min="1" max="15"></h2>
+            <p hidden><button>generate new map</button></p>
+            <p><button><b>Start</b></button></p>
+        </div>
+    </template>
+</head>
+<body>
+    <main>
+        <canvas width="192" height="108" class="game"></canvas>
+    </main>
+</body>
+<footer>
+    <p></p>
+</footer>
