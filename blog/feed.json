@@ -1,0 +1,44 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Pobregamers Blog",
+    "description": "",
+    "home_page_url": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview",
+    "feed_url": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/feed.json",
+    "user_comment": "",
+    "icon": "file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/website/PG-LOGO-2.png",
+    "author": {
+        "name": "Gonza8"
+    },
+    "items": [
+        {
+            "id": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/resena-lovers-in-a-dangerous-spacetime.html",
+            "url": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/resena-lovers-in-a-dangerous-spacetime.html",
+            "title": "[ Reseña ] Lovers in a Dangerous Spacetime",
+            "summary": "En redacción papá",
+            "content_html": "<p>En redacción papá</p>",
+            "image": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/media/posts/3/lovers.JPG",
+            "author": {
+                "name": "Gonza8"
+            },
+            "tags": [
+            ],
+            "date_published": "2026-03-08T15:04:03-03:00",
+            "date_modified": "2026-03-08T15:05:46-03:00"
+        },
+        {
+            "id": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/resena-raft.html",
+            "url": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/resena-raft.html",
+            "title": "[ Reseña ] Raft",
+            "summary": "En redacción papá",
+            "content_html": "<p>En redacción papá</p>\n<figure class=\"post__image\"><img loading=\"lazy\"  src=\"file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080.jpg\" alt=\"\" width=\"1920\" height=\"1080\" sizes=\"(max-width: 48em) 100vw, 768px\" srcset=\"file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-xs.jpg 300w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-sm.jpg 480w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-md.jpg 768w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-lg.jpg 1024w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-xl.jpg 1360w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-2xl.jpg 1600w\"></figure>",
+            "image": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/media/posts/1/raft-2.jpg",
+            "author": {
+                "name": "Gonza8"
+            },
+            "tags": [
+            ],
+            "date_published": "2026-03-08T13:57:09-03:00",
+            "date_modified": "2026-03-08T15:05:56-03:00"
+        }
+    ]
+}

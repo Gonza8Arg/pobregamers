@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>Pobregamers Blog</title>
+    <link href="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/feed.xml" rel="self" />
+    <link href="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview" />
+    <updated>2026-03-08T15:05:56-03:00</updated>
+    <author>
+        <name>Gonza8</name>
+    </author>
+    <id>file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview</id>
+
+    <entry>
+        <title>[ Reseña ] Lovers in a Dangerous Spacetime</title>
+        <author>
+            <name>Gonza8</name>
+        </author>
+        <link href="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/resena-lovers-in-a-dangerous-spacetime.html"/>
+        <id>file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/resena-lovers-in-a-dangerous-spacetime.html</id>
+        <media:content url="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/media/posts/3/lovers.JPG" medium="image" />
+
+        <updated>2026-03-08T15:04:03-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/media/posts/3/lovers.JPG" alt="" />
+                    En redacción papá
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/media/posts/3/lovers.JPG" class="type:primaryImage" alt="" /></p>
+                <p>En redacción papá</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>[ Reseña ] Raft</title>
+        <author>
+            <name>Gonza8</name>
+        </author>
+        <link href="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/resena-raft.html"/>
+        <id>file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/resena-raft.html</id>
+        <media:content url="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/media/posts/1/raft-2.jpg" medium="image" />
+
+        <updated>2026-03-08T13:57:09-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/media/posts/1/raft-2.jpg" alt="" />
+                    En redacción papá
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <p><img src="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/media/posts/1/raft-2.jpg" class="type:primaryImage" alt="" /></p>
+                <p>En redacción papá</p>
+<figure class="post__image"><img loading="lazy"  src="file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080.jpg" alt="" width="1920" height="1080" sizes="(max-width: 48em) 100vw, 768px" srcset="file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-xs.jpg 300w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-sm.jpg 480w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-md.jpg 768w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-lg.jpg 1024w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-xl.jpg 1360w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-2xl.jpg 1600w"></figure>
+            ]]>
+        </content>
+    </entry>
+</feed>
