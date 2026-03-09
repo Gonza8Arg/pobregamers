@@ -2,43 +2,61 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "Pobregamers Blog",
     "description": "",
-    "home_page_url": "https://pobregamers.online/blog",
-    "feed_url": "https://pobregamers.online/blog/feed.json",
+    "home_page_url": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview",
+    "feed_url": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/feed.json",
     "user_comment": "",
-    "icon": "https://pobregamers.online/blog/media/website/PG-LOGO-2.png",
+    "icon": "file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/website/PG-LOGO-2.png",
     "author": {
         "name": "Gonza8"
     },
     "items": [
         {
-            "id": "https://pobregamers.online/blog/resena-lovers-in-a-dangerous-spacetime.html",
-            "url": "https://pobregamers.online/blog/resena-lovers-in-a-dangerous-spacetime.html",
-            "title": "[ Reseña ] Lovers in a Dangerous Spacetime",
-            "summary": "En redacción papá",
-            "content_html": "<p>En redacción papá</p>",
-            "image": "https://pobregamers.online/blog/media/posts/3/lovers.JPG",
+            "id": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/recomendacion-resident-evil-requiem.html",
+            "url": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/recomendacion-resident-evil-requiem.html",
+            "title": "[ Recomendación ] Resident Evil Requiem",
+            "summary": "En redacción papá, pasate después",
+            "content_html": "<p>En redacción papá, pasate después</p>",
+            "image": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/media/posts/4/residentevilrequiem.jpg",
             "author": {
-                "name": "Gonza8"
+                "name": "Pantacheli"
             },
             "tags": [
+                   "Recomendaciones"
             ],
-            "date_published": "2026-03-08T15:04:03-03:00",
-            "date_modified": "2026-03-08T15:05:46-03:00"
+            "date_published": "2026-03-09T17:33:37-03:00",
+            "date_modified": "2026-03-09T17:36:48-03:00"
         },
         {
-            "id": "https://pobregamers.online/blog/resena-raft.html",
-            "url": "https://pobregamers.online/blog/resena-raft.html",
+            "id": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/resena-lovers-in-a-dangerous-spacetime.html",
+            "url": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/resena-lovers-in-a-dangerous-spacetime.html",
+            "title": "[ Reseña ] Lovers in a Dangerous Spacetime",
+            "summary": "En redacción papá, pasate después",
+            "content_html": "<p>En redacción papá, pasate después</p>",
+            "image": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/media/posts/3/lovers.JPG",
+            "author": {
+                "name": "Rats Sniper"
+            },
+            "tags": [
+                   "Reseñas"
+            ],
+            "date_published": "2026-03-08T15:04:03-03:00",
+            "date_modified": "2026-03-09T17:35:08-03:00"
+        },
+        {
+            "id": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/resena-raft.html",
+            "url": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/resena-raft.html",
             "title": "[ Reseña ] Raft",
             "summary": "Como amante de los juegos de supervivencia y la experiencia que he podido tener: Raft no me parece una mala idea, tiene un buen concepto, pero comete errores muy preocupantes que apenas comenzar el juego ya se notan. A nivel de jugabilidad y mecánicas es&hellip;",
-            "content_html": "<p>Como amante de los juegos de supervivencia y la experiencia que he podido tener:</p>\n<p>Raft no me parece una mala idea, tiene un buen concepto, pero comete errores muy preocupantes que apenas comenzar el juego ya se notan.</p>\n<p>A nivel de jugabilidad y mecánicas es donde más flojo está, para empezar este juego es muy <strong>superficial</strong>, a medida que vas avanzando el juego no te invita a mejorar, simplemente sos un robot que toma objetos y los almacenas. Las mejoras y creaciones que puedes craftear tienen un <strong>costo altísimo</strong> y duran muy poco. Para dar una perspectiva, puedes pasarte el juego simplemente crafteando un <strong>10%</strong> de los objetos totales del juego.</p>\n<p>Los enemigos son basicamente uno, y es el tiburón, que hasta la comunidad tuvo que crear un mod para que modificar el comportamiento del mismo porque es insoportable y sin sentido estar todo el tiempo malgastando materiales por un enemigo que solo está para tratar de balancear y que no sea tan plana la experiencia del jugador.</p>\n<p>El punto mas flojo y que más sale a la luz es la <strong>saturación de la sed y el alimento</strong>, ya que se bajan muy rápido a velocidades alarmantes para un juego que requiere explorar en islas muy grandes, arruinando la experiencia de la misma. Además de no contar con lugares para pasar la noche (via terrestre) ni punto de guardado estratégicos.</p>\n<p>Una cosa es sobrevivir, y otra es sobrevivir en un juego donde el tiempo es 20x veces mas rapido que la vida real. Si el día en X juego, pasa 20x más rápido, pues que la saturación de los alimentos duran acorde al mismo. </p>\n<p>Los gráficos están bien, un apartado artistico que personalmente me gusta y me recuerda una joya llamado RiME, pero en el tramo final del juego, incluso de las cinematicas finales, los desarrolladores no se gastaron en <strong>animar absolutamente nada</strong>, y montaron un par de imagenes pre-renderizadas sin sombras, como si una prueba de animación se tratase, como un insulto a la comunidad esperando el Final Chapter.</p>\n<blockquote>\n<p>Puntaje Final 4/10</p>\n</blockquote>\n<figure class=\"post__image\"><img loading=\"lazy\"  src=\"https://pobregamers.online/blog/media/posts/1/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080.jpg\" alt=\"\" width=\"1920\" height=\"1080\" sizes=\"(max-width: 48em) 100vw, 768px\" srcset=\"https://pobregamers.online/blog/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-xs.jpg 300w ,https://pobregamers.online/blog/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-sm.jpg 480w ,https://pobregamers.online/blog/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-md.jpg 768w ,https://pobregamers.online/blog/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-lg.jpg 1024w ,https://pobregamers.online/blog/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-xl.jpg 1360w ,https://pobregamers.online/blog/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-2xl.jpg 1600w\"></figure>",
-            "image": "https://pobregamers.online/blog/media/posts/1/raft-2.jpg",
+            "content_html": "<p>Como amante de los juegos de supervivencia y la experiencia que he podido tener:</p>\n<p>Raft no me parece una mala idea, tiene un buen concepto, pero comete errores muy preocupantes que apenas comenzar el juego ya se notan.</p>\n<p>A nivel de jugabilidad y mecánicas es donde más flojo está, para empezar este juego es muy <strong>superficial</strong>, a medida que vas avanzando el juego no te invita a mejorar, simplemente sos un robot que toma objetos y los almacenas. Las mejoras y creaciones que puedes craftear tienen un <strong>costo altísimo</strong> y duran muy poco. Para dar una perspectiva, puedes pasarte el juego simplemente crafteando un <strong>10%</strong> de los objetos totales del juego.</p>\n<p>Los enemigos son basicamente uno, y es el tiburón, que hasta la comunidad tuvo que crear un mod para que modificar el comportamiento del mismo porque es insoportable y sin sentido estar todo el tiempo malgastando materiales por un enemigo que solo está para tratar de balancear y que no sea tan plana la experiencia del jugador.</p>\n<p>El punto mas flojo y que más sale a la luz es la <strong>saturación de la sed y el alimento</strong>, ya que se bajan muy rápido a velocidades alarmantes para un juego que requiere explorar en islas muy grandes, arruinando la experiencia de la misma. Además de no contar con lugares para pasar la noche (via terrestre) ni punto de guardado estratégicos.</p>\n<p>Una cosa es sobrevivir, y otra es sobrevivir en un juego donde el tiempo es 20x veces mas rapido que la vida real. Si el día en X juego, pasa 20x más rápido, pues que la saturación de los alimentos duran acorde al mismo. </p>\n<p>Los gráficos están bien, un apartado artistico que personalmente me gusta y me recuerda una joya llamado RiME, pero en el tramo final del juego, incluso de las cinematicas finales, los desarrolladores no se gastaron en <strong>animar absolutamente nada</strong>, y montaron un par de imagenes pre-renderizadas sin sombras, como si una prueba de animación se tratase, como un insulto a la comunidad esperando el Final Chapter.</p>\n<blockquote>\n<p>Puntaje Final 4/10</p>\n</blockquote>\n<figure class=\"post__image\"><img loading=\"lazy\"  src=\"file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080.jpg\" alt=\"\" width=\"1920\" height=\"1080\" sizes=\"(max-width: 48em) 100vw, 768px\" srcset=\"file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-xs.jpg 300w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-sm.jpg 480w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-md.jpg 768w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-lg.jpg 1024w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-xl.jpg 1360w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-2xl.jpg 1600w\"></figure>",
+            "image": "file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/media/posts/1/raft-2.jpg",
             "author": {
                 "name": "Gonza8"
             },
             "tags": [
+                   "Reseñas"
             ],
             "date_published": "2026-03-08T13:57:09-03:00",
-            "date_modified": "2026-03-09T12:56:29-03:00"
+            "date_modified": "2026-03-09T17:30:39-03:00"
         }
     ]
 }
