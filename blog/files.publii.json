@@ -2,7 +2,7 @@
     {
         "path": "404.html",
         "type": "file",
-        "md5": "dbaf3a59f5f4dd0a0614a079a66e6104"
+        "md5": "fa6c475ba7af06aa711517c7eed69cc4"
     },
     {
         "path": "assets",
@@ -87,7 +87,7 @@
     {
         "path": "/authors/gonza8/index.html",
         "type": "file",
-        "md5": "437c4ed12853715eb0da65becff7d1d5"
+        "md5": "13dd4bc2773937db4392e16a0e0a3afa"
     },
     {
         "path": "authors/pantacheli",
@@ -97,7 +97,7 @@
     {
         "path": "/authors/pantacheli/index.html",
         "type": "file",
-        "md5": "a92db40543d51ba519aa5e2a669e6f7a"
+        "md5": "26ae68e307e890e55457a95a30171d37"
     },
     {
         "path": "authors/rats-sniper",
@@ -107,12 +107,12 @@
     {
         "path": "/authors/rats-sniper/index.html",
         "type": "file",
-        "md5": "d40075c5023cfc125c075dbb7a4b1d31"
+        "md5": "cd6117b5a89b6fc2fe17b73e1fe1b79f"
     },
     {
         "path": "feed.json",
         "type": "file",
-        "md5": "6231c1dd3c4638284e0c7fbe8ca34aa8"
+        "md5": "af89e3d6bb722ca92137d1793ec50036"
     },
     {
         "path": "feed.xml",
@@ -122,7 +122,7 @@
     {
         "path": "index.html",
         "type": "file",
-        "md5": "2663f93a0e0ac0e9adb0356e4866ec2b"
+        "md5": "497a85e1660f55c0657fdc98e142f5c7"
     },
     {
         "path": "media",
@@ -325,9 +325,9 @@
         "md5": "fc3586d890eaf9cf14c8c26821353505"
     },
     {
-        "path": "/media/website/PG-LOGO-2.png",
+        "path": "/media/website/PG-LOGO-con-fondo.png",
         "type": "file",
-        "md5": "752c7a12e397fc146f9795ba0c8a9192"
+        "md5": "9d13cf044ea718b40803bf315e3daee3"
     },
     {
         "path": "/media/website/PG-LOGO.png",
@@ -355,9 +355,9 @@
         "md5": "47008e6b4b5fc8a596145492125acc09"
     },
     {
-        "path": "/media/website/responsive/PG-LOGO-2-xs.png",
+        "path": "/media/website/responsive/PG-LOGO-con-fondo-xs.png",
         "type": "file",
-        "md5": "35251e2b76899cd2f01b84a283cb7980"
+        "md5": "6591839463649d7e09dc8d38b7bf101d"
     },
     {
         "path": "/media/website/responsive/PG-LOGO-xs.png",
@@ -367,22 +367,22 @@
     {
         "path": "recomendacion-resident-evil-requiem.html",
         "type": "file",
-        "md5": "2dc1b796770e14ef509342f0bbc7f521"
+        "md5": "b91227af330bb1a58ff9a9f76d876af0"
     },
     {
         "path": "resena-lovers-in-a-dangerous-spacetime.html",
         "type": "file",
-        "md5": "93f9c12efddc23b97f2f78029d2b4964"
+        "md5": "c4ed35e003c6d0a980a4968299407712"
     },
     {
         "path": "resena-raft.html",
         "type": "file",
-        "md5": "ef0458bd8379e3890924bedf17f30c1f"
+        "md5": "24018d33e6e14e4a1c44b3b85be6007b"
     },
     {
         "path": "resenas.html",
         "type": "file",
-        "md5": "7118a7419d4cffd5bde22de8ac26f8f0"
+        "md5": "85d6473f72c8a8ca73955105dd47da83"
     },
     {
         "path": "robots.txt",
@@ -397,7 +397,7 @@
     {
         "path": "/tags/index.html",
         "type": "file",
-        "md5": "7a0e21f7468862802a6afb485dbd2c00"
+        "md5": "b89f9b707ca5c80503ab389d61e98dc6"
     },
     {
         "path": "tags/recomendacion",
@@ -407,7 +407,7 @@
     {
         "path": "/tags/recomendacion/index.html",
         "type": "file",
-        "md5": "99cc943548a5a5dda80b07848bb5c361"
+        "md5": "8fd950c6d18b6cb2f7942687bdbe8694"
     },
     {
         "path": "tags/resenas",
@@ -417,6 +417,6 @@
     {
         "path": "/tags/resenas/index.html",
         "type": "file",
-        "md5": "c890944e5e0bf6530c1ba96ca12a383c"
+        "md5": "e7750fa0454bc1bdffd2b7228f86e736"
     }
 ]
