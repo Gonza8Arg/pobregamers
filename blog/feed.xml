@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
     <title>Pobregamers Blog</title>
-    <link href="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/feed.xml" rel="self" />
-    <link href="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview" />
+    <link href="https://pobregamers.online/blog/feed.xml" rel="self" />
+    <link href="https://pobregamers.online/blog" />
     <updated>2026-03-09T12:56:29-03:00</updated>
     <author>
         <name>Gonza8</name>
     </author>
-    <id>file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview</id>
+    <id>https://pobregamers.online/blog</id>
 
     <entry>
         <title>[ Reseña ] Lovers in a Dangerous Spacetime</title>
         <author>
             <name>Gonza8</name>
         </author>
-        <link href="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/resena-lovers-in-a-dangerous-spacetime.html"/>
-        <id>file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/resena-lovers-in-a-dangerous-spacetime.html</id>
-        <media:content url="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/media/posts/3/lovers.JPG" medium="image" />
+        <link href="https://pobregamers.online/blog/resena-lovers-in-a-dangerous-spacetime.html"/>
+        <id>https://pobregamers.online/blog/resena-lovers-in-a-dangerous-spacetime.html</id>
+        <media:content url="https://pobregamers.online/blog/media/posts/3/lovers.JPG" medium="image" />
 
         <updated>2026-03-08T15:04:03-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                        <img src="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/media/posts/3/lovers.JPG" alt="" />
+                        <img src="https://pobregamers.online/blog/media/posts/3/lovers.JPG" alt="" />
                     En redacción papá
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/media/posts/3/lovers.JPG" class="type:primaryImage" alt="" /></p>
+                    <p><img src="https://pobregamers.online/blog/media/posts/3/lovers.JPG" class="type:primaryImage" alt="" /></p>
                 <p>En redacción papá</p>
             ]]>
         </content>
@@ -37,20 +37,20 @@
         <author>
             <name>Gonza8</name>
         </author>
-        <link href="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/resena-raft.html"/>
-        <id>file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/resena-raft.html</id>
-        <media:content url="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/media/posts/1/raft-2.jpg" medium="image" />
+        <link href="https://pobregamers.online/blog/resena-raft.html"/>
+        <id>https://pobregamers.online/blog/resena-raft.html</id>
+        <media:content url="https://pobregamers.online/blog/media/posts/1/raft-2.jpg" medium="image" />
 
         <updated>2026-03-08T13:57:09-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                        <img src="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/media/posts/1/raft-2.jpg" alt="" />
+                        <img src="https://pobregamers.online/blog/media/posts/1/raft-2.jpg" alt="" />
                     Como amante de los juegos de supervivencia y la experiencia que he podido tener: Raft no me parece una mala idea, tiene un buen concepto, pero comete errores muy preocupantes que apenas comenzar el juego ya se notan. A nivel de jugabilidad y mecánicas es&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="file:///C:\Users\Gonza8\Documents\Publii\sites\pobregamers-blog\preview/media/posts/1/raft-2.jpg" class="type:primaryImage" alt="" /></p>
+                    <p><img src="https://pobregamers.online/blog/media/posts/1/raft-2.jpg" class="type:primaryImage" alt="" /></p>
                 <p>Como amante de los juegos de supervivencia y la experiencia que he podido tener:</p>
 <p>Raft no me parece una mala idea, tiene un buen concepto, pero comete errores muy preocupantes que apenas comenzar el juego ya se notan.</p>
 <p>A nivel de jugabilidad y mecánicas es donde más flojo está, para empezar este juego es muy <strong>superficial</strong>, a medida que vas avanzando el juego no te invita a mejorar, simplemente sos un robot que toma objetos y los almacenas. Las mejoras y creaciones que puedes craftear tienen un <strong>costo altísimo</strong> y duran muy poco. Para dar una perspectiva, puedes pasarte el juego simplemente crafteando un <strong>10%</strong> de los objetos totales del juego.</p>
@@ -61,7 +61,7 @@
 <blockquote>
 <p>Puntaje Final 4/10</p>
 </blockquote>
-<figure class="post__image"><img loading="lazy"  src="file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080.jpg" alt="" width="1920" height="1080" sizes="(max-width: 48em) 100vw, 768px" srcset="file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-xs.jpg 300w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-sm.jpg 480w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-md.jpg 768w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-lg.jpg 1024w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-xl.jpg 1360w ,file:///C:/Users/Gonza8/Documents/Publii/sites/pobregamers-blog/preview/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-2xl.jpg 1600w"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://pobregamers.online/blog/media/posts/1/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080.jpg" alt="" width="1920" height="1080" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pobregamers.online/blog/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-xs.jpg 300w ,https://pobregamers.online/blog/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-sm.jpg 480w ,https://pobregamers.online/blog/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-md.jpg 768w ,https://pobregamers.online/blog/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-lg.jpg 1024w ,https://pobregamers.online/blog/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-xl.jpg 1360w ,https://pobregamers.online/blog/media/posts/1/responsive/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.1920x1080-2xl.jpg 1600w"></figure>
             ]]>
         </content>
     </entry>
