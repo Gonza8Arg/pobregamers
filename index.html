@@ -1,362 +1,836 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pobregamers | Mendoza</title>
+<meta name="description" content="Pobregamers: el squad que juega con lag pero nunca se rinde. CS2, Rocket League, GTA V, Sons of the Forest y lo que se cruce.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon" />
+<style>
+  /* ============ TOKENS ============ */
+  :root{
+    --bg: #060606;
+    --bg-alt: #0b0b0b;
+    --panel: #0e0e0e;
+    --line: #262626;
+    --line-soft: #1a1a1a;
+    --white: #f5f5f3;
+    --dim: #b6b6b3;
+    --mute: #7c7c79;
+    --cut: 22px;
+    --cut-sm: 12px;
+    --display: 'Chakra Petch', sans-serif;
+    --body: 'Rajdhani', sans-serif;
+  }
 
-<html>
-	<head>
-		<title>Pobregamers Gaming</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body>
+  *{ margin:0; padding:0; box-sizing:border-box; }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  html{ scroll-behavior:smooth; }
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<!--span class="icon fa-diamond"></span-->
-							<img src="./images/logo.png" style="width: 60%">
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Pobregamers</h1>
-								<p>Grupo de amigos a los que le encantan los jueguitos B|</p>
-								<p>Prueba nuestro jueguito --> <a href="./ivandelivery/">Ivan Delivery</a></p>
-								<p>Prueba nuestro LOFI --> <a href="./lofi/">LOFI PG</a></p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="https://discord.gg/9GpDpHp">Discord</a></li>
-								<li><a href="https://www.instagram.com/pobregamers/">Instagram</a></li>
-								<!--li><a href="#intro">Home</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li-->
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+  body{
+    background:var(--bg);
+    color:var(--white);
+    font-family:var(--body);
+    font-weight:500;
+    font-size:17px;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
 
-				<!-- Main -->
-					<div id="main">
+  /* faint HUD grid texture on the whole page */
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 1px, transparent 1px 64px);
+    pointer-events:none;
+    z-index:0;
+  }
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-							</article>
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+  section{ position:relative; z-index:1; }
 
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-							</article>
+  :focus-visible{
+    outline:2px solid var(--white);
+    outline-offset:3px;
+  }
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
-							</article>
+  h1,h2,h3{
+    font-family:var(--display);
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.02em;
+  }
 
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="field half first">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="special" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
+  .eyebrow{
+    font-family:var(--display);
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.3em;
+    text-transform:uppercase;
+    color:var(--mute);
+  }
 
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
 
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
+  /* ============ CUT-CORNER SIGNATURE ============ */
+  .cut{
+    clip-path: polygon(
+      var(--cut) 0, 100% 0,
+      100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%,
+      0 100%, 0 var(--cut)
+    );
+  }
+  .cut-sm{
+    clip-path: polygon(
+      var(--cut-sm) 0, 100% 0,
+      100% calc(100% - var(--cut-sm)), calc(100% - var(--cut-sm)) 100%,
+      0 100%, 0 var(--cut-sm)
+    );
+  }
+  .cut-rev{
+    clip-path: polygon(
+      0 0, calc(100% - var(--cut)) 0,
+      100% var(--cut), 100% 100%,
+      var(--cut) 100%, 0 calc(100% - var(--cut))
+    );
+  }
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+  /* ============ NAV ============ */
+  header{
+    position:fixed; top:0; left:0; right:0;
+    z-index:50;
+    background:rgba(6,6,6,.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 32px;
+    max-width:1180px; margin:0 auto;
+  }
+  .brand{
+    display:flex; align-items:center; gap:12px;
+  }
+  .brand svg{ width:30px; height:auto; }
+  .brand span{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:19px;
+    letter-spacing:.08em;
+  }
+  .nav-links{
+    display:flex; align-items:center; gap:36px;
+    font-family:var(--display);
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+  }
+  .nav-links a{
+    color:var(--dim);
+    position:relative;
+    padding-bottom:4px;
+    transition:color .2s ease;
+  }
+  .nav-links a:hover{ color:var(--white); }
+  .nav-cta{
+    font-family:var(--display);
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    background:var(--white);
+    color:var(--bg);
+    padding:10px 20px;
+    white-space:nowrap;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .nav-cta:hover{ background:var(--dim); }
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+  /* ============ HERO ============ */
+  .hero{
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:140px 32px 80px;
+    position:relative;
+    border-bottom:1px solid var(--line-soft);
+    overflow:hidden;
+  }
+  .hero-dots{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    z-index:0;
+    pointer-events:none;
+  }
+  .hero-inner{
+    max-width:1180px;
+    margin:0 auto;
+    width:100%;
+    position:relative;
+    z-index:1;
+  }
+  .hero-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-family:var(--display);
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.25em;
+    text-transform:uppercase;
+    color:var(--mute);
+    border:1px solid var(--line);
+    padding:8px 16px;
+    margin-bottom:28px;
+  }
+  .hero-tag::before{
+    content:"";
+    width:7px; height:7px;
+    background:var(--white);
+    display:inline-block;
+    animation:blink 1.6s steps(1) infinite;
+  }
+  @keyframes blink{ 50%{ opacity:.15; } }
 
-								<section>
-									<h3 class="major">Lists</h3>
+  .hero h1{
+    font-size:clamp(52px, 11vw, 132px);
+    line-height:.92;
+    letter-spacing:.01em;
+    position:relative;
+    display:inline-block;
+    overflow:hidden;
+  }
+  .hero h1 .sweep{
+    position:absolute;
+    top:0; left:-140%;
+    width:60%; height:100%;
+    background:linear-gradient(100deg, transparent, rgba(255,255,255,.85), transparent);
+    transform:skewX(-20deg);
+    animation:sweep 1.4s ease-out .3s 1;
+  }
+  @keyframes sweep{
+    0%{ left:-140%; }
+    100%{ left:180%; }
+  }
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+  .hero p.lead{
+    font-size:clamp(17px,2vw,21px);
+    color:var(--dim);
+    max-width:560px;
+    margin-top:26px;
+    font-weight:500;
+  }
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+  .hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-top:44px;
+  }
+  .btn{
+    font-family:var(--display);
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    padding:16px 30px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    transition:transform .15s ease, background .15s ease, color .15s ease;
+  }
+  .btn-primary{
+    background:var(--white);
+    color:var(--bg);
+  }
+  .btn-primary:hover{ transform:translate(2px,-2px); background:var(--dim); }
+  .btn-ghost{
+    border:1px solid var(--line);
+    color:var(--white);
+  }
+  .btn-ghost:hover{ border-color:var(--white); transform:translate(2px,-2px); }
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-									</ul>
+  .hero-stats{
+    display:flex;
+    gap:48px;
+    margin-top:72px;
+    flex-wrap:wrap;
+  }
+  .hero-stats div{ border-left:1px solid var(--line); padding-left:16px; }
+  .hero-stats b{
+    font-family:var(--display);
+    font-size:28px;
+    display:block;
+  }
+  .hero-stats span{
+    font-size:13px;
+    color:var(--mute);
+    letter-spacing:.05em;
+  }
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button special">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions vertical">
-										<li><a href="#" class="button special">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
+  /* ============ SECTION HEADS ============ */
+  .section-head{
+    max-width:640px;
+    margin-bottom:56px;
+  }
+  .section-head h2{
+    font-size:clamp(34px,4.5vw,52px);
+    margin-top:14px;
+    line-height:1.02;
+  }
+  .section-head p{
+    color:var(--dim);
+    margin-top:16px;
+    font-size:17px;
+    max-width:480px;
+  }
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
+  section.block{ padding:110px 0; border-bottom:1px solid var(--line-soft); }
 
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
+  /* ============ GAMES ============ */
+  .games-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:2px;
+    background:var(--line-soft);
+    border:1px solid var(--line-soft);
+  }
+  .game-card{
+    background:var(--bg);
+    padding:36px 30px;
+    min-height:220px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    transition:background .2s ease;
+    position:relative;
+  }
+  .game-card:hover{ background:var(--bg-alt); }
+  .game-card .gi{
+    width:40px; height:40px;
+    color:var(--white);
+    margin-bottom:20px;
+  }
+  .game-card h3{
+    font-size:20px;
+    letter-spacing:.03em;
+  }
+  .game-card p{
+    color:var(--mute);
+    font-size:15px;
+    margin-top:10px;
+    line-height:1.45;
+  }
+  .game-card .idx{
+    position:absolute;
+    top:20px; right:26px;
+    font-family:var(--display);
+    font-size:12px;
+    color:var(--line);
+    font-weight:700;
+  }
 
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button special">Special</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button special icon fa-download">Icon</a></li>
-										<li><a href="#" class="button icon fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button special disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
+  /* ============ LOGROS ============ */
+  .achv-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .achv-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:28px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    transition:transform .15s ease, border-color .15s ease;
+  }
+  .achv-card:hover{ transform:translateY(-4px); border-color:#3a3a3a; }
+  .achv-icon{
+    width:64px; height:64px;
+    border:1px dashed #3a3a3a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--bg);
+    flex-shrink:0;
+    overflow:hidden;
+  }
+  .achv-icon img{
+    width:100%; height:100%; object-fit:cover;
+    display:none;
+  }
+  .achv-icon img[src]:not([src=""]){ display:block; }
+  .achv-icon .ph{
+    color:var(--line);
+    font-size:22px;
+    font-family:var(--display);
+  }
+  .achv-body .eyebrow{ font-size:11px; }
+  .achv-card h3{
+    font-size:18px;
+    margin-top:6px;
+    color:var(--white);
+    letter-spacing:.02em;
+  }
+  .achv-card p{
+    font-size:14.5px;
+    color:var(--mute);
+    margin-top:8px;
+    line-height:1.5;
+  }
 
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="field half first">
-											<label for="demo-name">Name</label>
-											<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-										</div>
-										<div class="field half">
-											<label for="demo-email">Email</label>
-											<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-										</div>
-										<div class="field">
-											<label for="demo-category">Category</label>
-											<div class="select-wrapper">
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-										</div>
-										<div class="field half first">
-											<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-											<label for="demo-priority-low">Low</label>
-										</div>
-										<div class="field half">
-											<input type="radio" id="demo-priority-high" name="demo-priority">
-											<label for="demo-priority-high">High</label>
-										</div>
-										<div class="field half first">
-											<input type="checkbox" id="demo-copy" name="demo-copy">
-											<label for="demo-copy">Email me a copy</label>
-										</div>
-										<div class="field half">
-											<input type="checkbox" id="demo-human" name="demo-human" checked>
-											<label for="demo-human">Not a robot</label>
-										</div>
-										<div class="field">
-											<label for="demo-message">Message</label>
-											<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="special" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
+  /* ============ ABOUT / SQUAD STRIP ============ */
+  .squad{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+    align-items:center;
+  }
+  .squad blockquote{
+    font-family:var(--display);
+    font-size:clamp(24px,3vw,34px);
+    line-height:1.25;
+    font-weight:500;
+  }
+  .squad blockquote b{ font-weight:700; }
+  .squad-facts{
+    border-top:1px solid var(--line);
+  }
+  .squad-facts div{
+    display:flex;
+    justify-content:space-between;
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+    font-size:15px;
+  }
+  .squad-facts span:first-child{ color:var(--mute); }
+  .squad-facts span:last-child{ font-family:var(--display); font-weight:600; }
 
-							</article>
+  /* ============ FOOTER ============ */
+  footer{
+    padding:64px 0 40px;
+  }
+  .foot-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:36px;
+    padding-bottom:40px;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .foot-brand{ display:flex; align-items:center; gap:14px; }
+  .foot-brand svg{ width:34px; }
+  .foot-brand span{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:22px;
+    letter-spacing:.06em;
+  }
+  .foot-links{
+    display:flex;
+    gap:28px;
+    font-family:var(--display);
+    font-size:13px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--dim);
+  }
+  .foot-links a:hover{ color:var(--white); }
+  .foot-bottom{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    padding-top:24px;
+    font-size:13px;
+    color:var(--mute);
+  }
 
-					</div>
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:900px){
+    .games-grid{ grid-template-columns:repeat(2,1fr); }
+    .achv-grid{ grid-template-columns:repeat(2,1fr); }
+    .squad{ grid-template-columns:1fr; gap:40px; }
+    .nav-links{ display:none; }
+  }
+  @media (max-width:640px){
+    .wrap{ padding:0 20px; }
+    .nav{ padding:14px 20px; }
+    .hero{ padding:120px 20px 60px; }
+    .games-grid{ grid-template-columns:1fr; }
+    .achv-grid{ grid-template-columns:1fr; }
+    .hero-stats{ gap:28px; }
+    section.block{ padding:72px 0; }
+    .foot-top{ flex-direction:column; align-items:flex-start; }
+  }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Copyright 2026</p>
-					</footer>
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .hero h1 .sweep, .hero-tag::before{ animation:none; }
+    *{ transition:none !important; }
+  }
+</style>
+</head>
+<body>
 
-			</div>
+<!-- ============ NAV ============ -->
+<header>
+  <div class="nav">
+    <a href="#top" class="brand" aria-label="Pobregamers, inicio">
+      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="700px" height="600px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 700 600">
+      <defs>
+        <style type="text/css"><![CDATA[.fil0 {fill:#FEFEFE}]]></style>
+      </defs>
+      <g id="Capa_x0020_1">
+        <g id="_2539097466192">
+          <polygon class="fil0" points="0.02,0.99 394.55,1 394.52,235.51 173.88,405.88 173.88,287.89 301.79,188.8 301.83,88.62 90.95,88.7 89.92,510.59 0.01,585.26 "/>
+          <polygon class="fil0" points="444.82,88.74 699.01,88.83 623.77,180.7 445.1,180.7 "/>
+          <polygon class="fil0" points="558.33,276.09 698.22,276.07 698.22,599.97 300.54,599.99 300.56,375.96 395.39,307.5 395.39,517.94 604.3,517.93 604.31,358.42 481.59,358.46 "/>
+        </g>
+      </g>
+     </svg>
+      <span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#juegos">Juegos</a>
+      <a href="#logros">Logros</a>
+      <a href="#squad">Squad</a>
+    </nav>
+    <a class="nav-cta cut-sm" href="https://discord.gg/9GpDpHp" target="_blank" rel="noopener">Discord</a>
+  </div>
+</header>
 
-		<!-- BG -->
-			<div id="bg"></div>
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <canvas class="hero-dots" id="heroDots" aria-hidden="true"></canvas>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+  <div class="hero-inner">
+    <div class="hero-tag">La Squad que mas pega coco</div>
+    <h1>POBRE<br>GAMERS<span class="sweep" aria-hidden="true"></span></h1>
+    <p class="lead">Sin sponsors, sin habilidad, sin excusas. Somos un grupo de amigos que se junta a jugar, putea el ping y de vez en cuando al Nahuel.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary cut-sm" href="#juegos">Juegos</a>
+      <a class="btn btn-ghost cut-sm" href="#logros">Logros de la Squad</a>
+    </div>
+    <div class="hero-stats">
+      <div><b>+4</b><span>juegos fijos</span></div>
+      <div><b>24/7</b><span>discord prendido</span></div>
+      <div><b>0</b><span>presupuesto</span></div>
+    </div>
+  </div>
+</section>
 
-	</body>
+<!-- ============ JUEGOS ============ -->
+<section class="block" id="juegos">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Rotación fija</span>
+      <h2>A qué jugamos</h2>
+      <p>Estos son los de siempre. Después está todo lo que baja un finde y no se llega a desinstalar antes del lunes.</p>
+    </div>
+
+    <div class="games-grid">
+      <div class="game-card">
+        <span class="idx">CS2</span>
+        <div>
+          <svg class="gi" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="24" cy="24" r="15"/><circle cx="24" cy="24" r="2.4" fill="currentColor" stroke="none"/><path d="M24 4v10M24 34v10M4 24h10M34 24h10"/></svg>
+          <h3>Counter-Strike&nbsp;2</h3>
+        </div>
+        <p>Kills por la espalda porque no revisan bolsa, fumadera de balas, cheaters y smurfs.</p>
+      </div>
+
+      <div class="game-card">
+        <span class="idx">RL</span>
+        <div>
+          <svg class="gi" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 30l3-9a4 4 0 0 1 3.8-2.8h18.4A4 4 0 0 1 37 21l3 9"/><rect x="6" y="30" width="36" height="7" rx="1.5"/><circle cx="14" cy="37" r="3"/><circle cx="34" cy="37" r="3"/><path d="M4 27h6M38 27h6"/></svg>
+          <h3>Rocket League</h3>
+        </div>
+        <p>Los autos vuelan más alto que la señal del wifi de la casa.</p>
+      </div>
+
+      <div class="game-card">
+        <span class="idx">GTA</span>
+        <div>
+          <svg class="gi" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path stroke-linejoin="round" d="M24 4l5.5 12L42 18l-9 9 2 13-11-6-11 6 2-13-9-9 12.5-2z"/></svg>
+          <h3>GTA&nbsp;V</h3>
+        </div>
+        <p>El Gonza se lo terminó al 100% y nunca tocó el online.</p>
+      </div>
+
+      <div class="game-card">
+        <span class="idx">SOTF</span>
+        <div>
+          <svg class="gi" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M24 4l9 16H15z"/><path d="M24 14l7.5 14H16.5z"/><path d="M24 26v18M17 44h14"/></svg>
+          <h3>Sons of the&nbsp;Forest</h3>
+        </div>
+        <p>El mejor juego de supervivencia que hemos jugado, el Gonza y el Nahuel lo platinaron.</p>
+      </div>
+
+      <div class="game-card">
+        <span class="idx">+</span>
+        <div>
+          <svg class="gi" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="16" width="38" height="18" rx="9"/><path d="M15 22v6M12 25h6"/><circle cx="30" cy="22" r="1.6" fill="currentColor" stroke="none"/><circle cx="35" cy="27" r="1.6" fill="currentColor" stroke="none"/></svg>
+          <h3>Y lo que caiga</h3>
+        </div>
+        <p>Lo que esté de moda, un REPO, un RV, lo que venga.</p>
+      </div>
+
+      <div class="game-card">
+        <span class="idx">?</span>
+        <div>
+          <svg class="gi" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M24 44s-16-9.5-16-21A9 9 0 0 1 24 15a9 9 0 0 1 16 8c0 11.5-16 21-16 21z"/></svg>
+          <h3>Sumate vos</h3>
+        </div>
+        <p>Venite papá, la vas a pasar joya.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOGROS ============ -->
+<section class="block" id="logros">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Salón de trofeos</span>
+      <h2>Logros del escuadrón</h2>
+      <p>Lo que fuimos ganando (o sobreviviendo) como grupo.</p>
+    </div>
+
+    <div class="achv-grid">
+
+      <article class="achv-card cut-sm">
+        <div class="achv-icon">
+          <img src="./imagenes/logro1.png" alt="">
+          <span class="ph">01</span>
+        </div>
+        <div class="achv-body">
+          <span class="eyebrow">✔ Desbloqueado</span>
+          <h3>Coleccionista</h3>
+          <p>Comprar un juego todos, y nunca abrirlo.</p>
+        </div>
+      </article>
+
+      <article class="achv-card cut-sm">
+        <div class="achv-icon">
+          <img src="./imagenes/logro2.png" alt="">
+          <span class="ph">02</span>
+        </div>
+        <div class="achv-body">
+          <span class="eyebrow">✔ Desbloqueado</span>
+          <h3>Dificultad Catalano</h3>
+          <p>Jugar una competitiva y justo se larga Zonda y Lluvia.</p>
+        </div>
+      </article>
+
+      <article class="achv-card cut-sm">
+        <div class="achv-icon">
+          <img src="./imagenes/logro3.png" alt="">
+          <span class="ph">03</span>
+        </div>
+        <div class="achv-body">
+          <span class="eyebrow">✔ Desbloqueado</span>
+          <h3>El Volante</h3>
+          <p>No poder hacer flick de lo pesado que es el G502.</p>
+        </div>
+      </article>
+
+      <article class="achv-card cut-sm">
+        <div class="achv-icon">
+          <img src="./imagenes/logro4.png" alt="">
+          <span class="ph">04</span>
+        </div>
+        <div class="achv-body">
+          <span class="eyebrow">✔ Desbloqueado</span>
+          <h3>Chernobyl</h3>
+          <p>Esforzarte tanto en una ronda que chupas toda la corriente de la provincia.</p>
+        </div>
+      </article>
+
+      <article class="achv-card cut-sm">
+        <div class="achv-icon">
+          <img src="./imagenes/logro5.png" alt="">
+          <span class="ph">05</span>
+        </div>
+        <div class="achv-body">
+          <span class="eyebrow">✔ Desbloqueado</span>
+          <h3>En mis tiempos no pasaba</h3>
+          <p>Que te maten de un solo tiro con Five-seven.</p>
+        </div>
+      </article>
+
+      <article class="achv-card cut-sm">
+        <div class="achv-icon">
+          <img src="./imagenes/logro6.png" alt="">
+          <span class="ph">06</span>
+        </div>
+        <div class="achv-body">
+          <span class="eyebrow">✖ Bloqueado</span>
+          <h3>Escultor digital</h3>
+          <p>Hacer que el Nahuel imprima el escudo del capitán américa.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SQUAD ============ -->
+<section class="block" id="squad">
+  <div class="wrap squad">
+    <blockquote>
+      No somos pro, no tenemos setup de streamer y el router se cuelga en el peor momento. <b>Pero cuando nos juntamos a jugar, no nos gana nadie el buen humor.</b>
+    </blockquote>
+    <div class="squad-facts">
+      <div><span>Fundado por</span><span>ping alto y ganas</span></div>
+      <div><span>Base de operaciones</span><span>el discord de siempre</span></div>
+      <div><span>Horario pico</span><span>después de las 22 hs</span></div>
+      <div><span>Reglas</span><span>ninguna, más que aguantar</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg viewBox="0 0 1080 936" fill="none" aria-hidden="true"><g transform="translate(0.000000,936.000000) scale(0.100000,-0.100000)" fill="#f5f5f3" stroke="none"><path d="M0 4680 l0 -4680 5400 0 5400 0 0 4680 0 4680 -5400 0 -5400 0 0
+-4680z m5910 2092 l0 -1348 -262 -205 c-632 -494 -1259 -983 -1725 -1347 -276
+-216 -505 -392 -508 -392 -3 0 -5 303 -5 673 l0 672 358 280 c196 153 522 409
+725 568 l367 288 0 574 0 575 -1195 0 -1195 0 0 -667 c0 -368 -2 -711 -4 -763
+-2 -52 -4 -840 -5 -1751 l-1 -1656 -504 -424 c-278 -233 -510 -425 -515 -427
+-12 -4 -16 6679 -4 6691 3 4 1011 7 2240 7 l2233 0 0 -1348z m3444 326 c-5 -7
+-197 -246 -427 -530 l-419 -518 -1008 0 -1007 0 -6 68 c-4 37 -7 275 -7 530
+l0 462 1440 0 c1150 0 1440 -3 1434 -12z m1 -3998 l0 -1855 -2252 -3 -2253 -2
+0 1288 0 1289 529 386 c292 213 532 387 535 387 3 0 6 -540 6 -1200 l0 -1200
+1185 0 1185 0 0 910 0 910 -690 0 c-379 0 -690 4 -690 8 0 8 74 89 637 700
+l224 242 792 -2 792 -3 0 -1855z"/></g></svg>
+        <span>POBREGAMERS</span>
+      </div>
+      <div class="foot-links">
+        <a href="#juegos">Juegos</a>
+        <a href="#logros">Logros</a>
+        <a href="https://discord.gg/9GpDpHp" target="_blank" rel="noopener">Discord</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Pobregamers. Presupuesto bajo, moral alta.</span>
+      <span>pobregamers.online</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // partículas flotantes de fondo en el hero
+  (function(){
+    var canvas = document.getElementById('heroDots');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    var hero = canvas.closest('.hero');
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var dots = [];
+    var W, H, DPR;
+
+    function sizeCanvas(){
+      var rect = hero.getBoundingClientRect();
+      DPR = Math.min(window.devicePixelRatio || 1, 2);
+      W = rect.width;
+      H = rect.height;
+      canvas.width = W * DPR;
+      canvas.height = H * DPR;
+      canvas.style.width = W + 'px';
+      canvas.style.height = H + 'px';
+      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    }
+
+    function makeDots(){
+      var count = Math.round((W * H) / 14000);
+      count = Math.max(36, Math.min(count, 130));
+      dots = [];
+      for (var i = 0; i < count; i++){
+        dots.push({
+          x: Math.random() * W,
+          y: Math.random() * H,
+          r: Math.random() * 1.4 + 0.5,
+          vx: (Math.random() - 0.5) * 0.12,
+          vy: (Math.random() - 0.5) * 0.12,
+          a: Math.random() * 0.5 + 0.15
+        });
+      }
+    }
+
+    function step(){
+      ctx.clearRect(0, 0, W, H);
+      for (var i = 0; i < dots.length; i++){
+        var d = dots[i];
+        d.x += d.vx;
+        d.y += d.vy;
+        if (d.x < -4) d.x = W + 4;
+        if (d.x > W + 4) d.x = -4;
+        if (d.y < -4) d.y = H + 4;
+        if (d.y > H + 4) d.y = -4;
+        ctx.beginPath();
+        ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(245,245,243,' + d.a + ')';
+        ctx.fill();
+      }
+      if (!reduceMotion) requestAnimationFrame(step);
+    }
+
+    function init(){
+      sizeCanvas();
+      makeDots();
+      ctx.clearRect(0, 0, W, H);
+      step();
+    }
+
+    var resizeTimer;
+    window.addEventListener('resize', function(){
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(init, 150);
+    });
+
+    init();
+  })();
+
+  // muestra el ícono de logro solo si el <img> tiene un src cargado
+  document.querySelectorAll('.achv-icon img').forEach(function(img){
+    function check(){
+      var ph = img.nextElementSibling;
+      if (img.getAttribute('src') && img.complete && img.naturalWidth > 0) {
+        img.style.display = 'block';
+        if (ph) ph.style.display = 'none';
+      } else {
+        img.style.display = 'none';
+        if (ph) ph.style.display = 'flex';
+      }
+    }
+    img.addEventListener('load', check);
+    img.addEventListener('error', check);
+    check();
+  });
+</script>
+
+</body>
 </html>
