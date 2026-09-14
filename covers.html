@@ -669,10 +669,10 @@ l224 242 792 -2 792 -3 0 -1855z"/></g></svg>
     const foto = t.portada || PORTADA_GENERAL;
     if (foto){
       coverImg.src = foto;
-      coverPh.style.display = 'none';
+      if (coverPh) coverPh.style.display = 'none';
     } else {
       coverImg.removeAttribute('src');
-      coverPh.style.display = 'flex';
+      if (coverPh) coverPh.style.display = 'flex';
     }
 
     setActiveRow(i);
