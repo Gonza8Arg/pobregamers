@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Covers | Pobregamers</title>
+<meta name="description" content="Reproductor de covers de Pobregamers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon" />
+<style>
+  /* ============ TOKENS ============ */
+  :root{
+    --bg: #060606;
+    --bg-alt: #0b0b0b;
+    --panel: #0e0e0e;
+    --line: #262626;
+    --line-soft: #1a1a1a;
+    --white: #f5f5f3;
+    --dim: #b6b6b3;
+    --mute: #7c7c79;
+    --cut: 22px;
+    --cut-sm: 12px;
+    --display: 'Chakra Petch', sans-serif;
+    --body: 'Rajdhani', sans-serif;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    background:var(--bg);
+    color:var(--white);
+    font-family:var(--body);
+    font-weight:500;
+    font-size:17px;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+  }
+
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 64px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 1px, transparent 1px 64px);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+  section{ position:relative; z-index:1; }
+
+  :focus-visible{
+    outline:2px solid var(--white);
+    outline-offset:3px;
+  }
+
+  h1,h2,h3{
+    font-family:var(--display);
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.02em;
+  }
+
+  .eyebrow{
+    font-family:var(--display);
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.3em;
+    text-transform:uppercase;
+    color:var(--mute);
+  }
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* ============ CUT-CORNER SIGNATURE ============ */
+  .cut-sm{
+    clip-path: polygon(
+      var(--cut-sm) 0, 100% 0,
+      100% calc(100% - var(--cut-sm)), calc(100% - var(--cut-sm)) 100%,
+      0 100%, 0 var(--cut-sm)
+    );
+  }
+
+  /* ============ NAV ============ */
+  header{
+    position:fixed; top:0; left:0; right:0;
+    z-index:50;
+    background:rgba(6,6,6,.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 32px;
+    max-width:1180px; margin:0 auto;
+  }
+  .brand{
+    display:flex; align-items:center; gap:12px;
+  }
+  .brand svg{ width:30px; height:auto; }
+  .brand span{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:19px;
+    letter-spacing:.08em;
+  }
+  .nav-cta{
+    font-family:var(--display);
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    background:var(--white);
+    color:var(--bg);
+    padding:10px 20px;
+    white-space:nowrap;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .nav-cta:hover{ background:var(--dim); }
+
+  /* ============ PLAYER ============ */
+  main{
+    flex:1;
+    display:flex;
+    align-items:center;
+    padding:140px 32px 80px;
+  }
+  .player-wrap{
+    max-width:1180px;
+    margin:0 auto;
+    width:100%;
+  }
+  .section-head{
+    max-width:640px;
+    margin-bottom:48px;
+  }
+  .section-head h1{
+    font-size:clamp(34px,4.5vw,52px);
+    margin-top:14px;
+    line-height:1.02;
+  }
+  .section-head p{
+    color:var(--dim);
+    margin-top:16px;
+    font-size:17px;
+    max-width:480px;
+  }
+
+  .player{
+    display:grid;
+    grid-template-columns:340px 1fr;
+    gap:56px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:40px;
+  }
+
+  /* portada cuadrada */
+  .cover{
+    width:100%;
+    aspect-ratio:1/1;
+    background:var(--bg);
+    border:1px dashed #3a3a3a;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    flex-shrink:0;
+  }
+  .cover img{
+    width:100%; height:100%; object-fit:cover;
+    display:none;
+  }
+  .cover img[src]:not([src=""]){ display:block; }
+  .cover .ph{
+    font-family:var(--display);
+    font-size:13px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--mute);
+    text-align:center;
+    padding:0 20px;
+  }
+
+  .now-playing{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+  }
+  .np-eyebrow{ font-size:12px; margin-bottom:10px; }
+  .np-title{
+    font-size:clamp(24px,3vw,32px);
+    line-height:1.1;
+  }
+  .np-artist{
+    font-family:var(--display);
+    font-size:16px;
+    font-weight:600;
+    letter-spacing:.04em;
+    color:var(--mute);
+    margin-top:10px;
+    text-transform:uppercase;
+  }
+
+  /* progreso */
+  .progress-row{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-top:34px;
+  }
+  .time{
+    font-family:var(--display);
+    font-size:13px;
+    color:var(--mute);
+    min-width:40px;
+  }
+  .time.end{ text-align:right; }
+  input[type="range"]{
+    -webkit-appearance:none;
+    appearance:none;
+    flex:1;
+    height:2px;
+    background:var(--line);
+    outline:none;
+    cursor:pointer;
+  }
+  input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    appearance:none;
+    width:13px; height:13px;
+    background:var(--white);
+    border-radius:0;
+    cursor:pointer;
+    transition:transform .15s ease;
+  }
+  input[type="range"]::-webkit-slider-thumb:hover{ transform:scale(1.2); }
+  input[type="range"]::-moz-range-thumb{
+    width:13px; height:13px;
+    background:var(--white);
+    border:none;
+    border-radius:0;
+    cursor:pointer;
+  }
+
+  /* controles */
+  .controls-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+    margin-top:32px;
+    flex-wrap:wrap;
+  }
+  .transport{
+    display:flex;
+    align-items:center;
+    gap:18px;
+  }
+  .tbtn{
+    background:none;
+    border:1px solid var(--line);
+    color:var(--white);
+    width:44px; height:44px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  .tbtn:hover{ border-color:var(--white); }
+  .tbtn svg{ width:16px; height:16px; }
+  .tbtn.play{
+    width:56px; height:56px;
+    background:var(--white);
+    border-color:var(--white);
+  }
+  .tbtn.play svg{ width:18px; height:18px; color:var(--bg); }
+  .tbtn.play:hover{ background:var(--dim); }
+
+  .volume-row{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    min-width:160px;
+  }
+  .volume-row svg{ width:18px; height:18px; color:var(--mute); flex-shrink:0; }
+  .volume-row input[type="range"]{ width:110px; }
+
+  /* playlist */
+  .playlist{
+    margin-top:56px;
+  }
+  .playlist-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    border-bottom:1px solid var(--line);
+    padding-bottom:14px;
+    margin-bottom:4px;
+  }
+  .playlist-head h2{ font-size:18px; }
+  .playlist-head span{
+    font-family:var(--display);
+    font-size:12px;
+    color:var(--mute);
+    letter-spacing:.1em;
+  }
+  .track{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:16px 4px;
+    border-bottom:1px solid var(--line-soft);
+    cursor:pointer;
+    background:none;
+    border-left:none; border-right:none; border-top:none;
+    width:100%;
+    text-align:left;
+    transition:background .15s ease;
+  }
+  .track:hover{ background:var(--bg-alt); }
+  .track.active .track-title{ color:var(--white); }
+  .track.active .track-idx{ color:var(--white); }
+  .track-idx{
+    font-family:var(--display);
+    font-size:13px;
+    color:var(--line);
+    width:24px;
+    flex-shrink:0;
+  }
+  .track-info{ flex:1; min-width:0; }
+  .track-title{
+    font-family:var(--display);
+    font-size:15px;
+    font-weight:600;
+    color:var(--dim);
+    letter-spacing:.02em;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .track-artist{
+    font-size:13.5px;
+    color:var(--mute);
+    margin-top:2px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .track-dur{
+    font-family:var(--display);
+    font-size:12.5px;
+    color:var(--mute);
+    flex-shrink:0;
+  }
+
+  /* ============ FOOTER ============ */
+  footer{
+    padding:64px 0 40px;
+    border-top:1px solid var(--line-soft);
+  }
+  .foot-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:36px;
+    padding-bottom:40px;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .foot-brand{ display:flex; align-items:center; gap:14px; }
+  .foot-brand svg{ width:34px; }
+  .foot-brand span{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:22px;
+    letter-spacing:.06em;
+  }
+  .foot-links{
+    display:flex;
+    gap:28px;
+    font-family:var(--display);
+    font-size:13px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--dim);
+  }
+  .foot-links a:hover{ color:var(--white); }
+  .foot-bottom{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    padding-top:24px;
+    font-size:13px;
+    color:var(--mute);
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:900px){
+    .player{ grid-template-columns:1fr; }
+    .cover{ max-width:340px; margin:0 auto; }
+  }
+  @media (max-width:640px){
+    .wrap{ padding:0 20px; }
+    .nav{ padding:14px 20px; }
+    main{ padding:120px 20px 60px; }
+    .player{ padding:26px; gap:36px; }
+    .controls-row{ justify-content:center; }
+    .volume-row{ justify-content:center; width:100%; }
+    .foot-top{ flex-direction:column; align-items:flex-start; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ transition:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header>
+  <div class="nav">
+    <a href="#top" class="brand" aria-label="Pobregamers, inicio">
+      <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="700px" height="600px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 700 600">
+      <defs>
+        <style type="text/css"><![CDATA[.fil0 {fill:#FEFEFE}]]></style>
+      </defs>
+      <g id="Capa_x0020_1">
+        <g id="_2539097466192">
+          <polygon class="fil0" points="0.02,0.99 394.55,1 394.52,235.51 173.88,405.88 173.88,287.89 301.79,188.8 301.83,88.62 90.95,88.7 89.92,510.59 0.01,585.26 "/>
+          <polygon class="fil0" points="444.82,88.74 699.01,88.83 623.77,180.7 445.1,180.7 "/>
+          <polygon class="fil0" points="558.33,276.09 698.22,276.07 698.22,599.97 300.54,599.99 300.56,375.96 395.39,307.5 395.39,517.94 604.3,517.93 604.31,358.42 481.59,358.46 "/>
+        </g>
+      </g>
+     </svg>
+      <span></span>
+    </a>
+    <a class="nav-cta cut-sm" href="https://discord.gg/9GpDpHp" target="_blank" rel="noopener">Discord</a>
+  </div>
+</header>
+
+<!-- ============ PLAYER ============ -->
+<main id="top">
+  <div class="player-wrap wrap">
+    <div class="section-head">
+      <span class="eyebrow">Home studio de garage</span>
+      <h1>Covers PG</h1>
+      <p>Grabados con lo que hay, probando de todo un poco.</p>
+    </div>
+
+    <div class="player">
+
+      <!-- portada -->
+      <div class="cover">
+        <!--
+          Para poner tu foto de portada, cambiá el src de abajo.
+          Ejemplo: <img src="imagenes/portada.jpg" alt="Portada del cover">
+        -->
+        <img id="coverImg" src="imagenes/g8.jpg" alt="Portada del cover">
+        <!--span class="ph" id="coverPh">PORTADA<br>ACÁ</span-->
+      </div>
+
+      <!-- ahora suena + controles -->
+      <div class="now-playing">
+        <div>
+          <span class="eyebrow np-eyebrow">Ahora suena</span>
+          <h2 class="np-title" id="npTitle">Elegí un tema</h2>
+          <p class="np-artist" id="npArtist">de la lista</p>
+        </div>
+
+        <div class="progress-row">
+          <span class="time" id="curTime">0:00</span>
+          <input type="range" id="seek" value="0" min="0" max="100" step="0.1">
+          <span class="time end" id="durTime">0:00</span>
+        </div>
+
+        <div class="controls-row">
+          <div class="transport">
+            <button class="tbtn" id="prevBtn" aria-label="Anterior">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zM20 6L10 12l10 6z"/></svg>
+            </button>
+            <button class="tbtn play" id="playBtn" aria-label="Reproducir">
+              <svg id="playIcon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <button class="tbtn" id="nextBtn" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 6h2v12h-2zM4 6l10 6-10 6z"/></svg>
+            </button>
+          </div>
+
+          <div class="volume-row">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4.03v8.06A4.5 4.5 0 0 0 16.5 12z"/></svg>
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="0.8">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ LISTA DE TEMAS ============ -->
+    <div class="playlist">
+      <div class="playlist-head">
+        <h2>Lista de temas</h2>
+        <span id="trackCount">0 temas</span>
+      </div>
+      <div id="trackList"></div>
+    </div>
+  </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <svg viewBox="0 0 1080 936" fill="none" aria-hidden="true"><g transform="translate(0.000000,936.000000) scale(0.100000,-0.100000)" fill="#f5f5f3" stroke="none"><path d="M0 4680 l0 -4680 5400 0 5400 0 0 4680 0 4680 -5400 0 -5400 0 0
+-4680z m5910 2092 l0 -1348 -262 -205 c-632 -494 -1259 -983 -1725 -1347 -276
+-216 -505 -392 -508 -392 -3 0 -5 303 -5 673 l0 672 358 280 c196 153 522 409
+725 568 l367 288 0 574 0 575 -1195 0 -1195 0 0 -667 c0 -368 -2 -711 -4 -763
+-2 -52 -4 -840 -5 -1751 l-1 -1656 -504 -424 c-278 -233 -510 -425 -515 -427
+-12 -4 -16 6679 -4 6691 3 4 1011 7 2240 7 l2233 0 0 -1348z m3444 326 c-5 -7
+-197 -246 -427 -530 l-419 -518 -1008 0 -1007 0 -6 68 c-4 37 -7 275 -7 530
+l0 462 1440 0 c1150 0 1440 -3 1434 -12z m1 -3998 l0 -1855 -2252 -3 -2253 -2
+0 1288 0 1289 529 386 c292 213 532 387 535 387 3 0 6 -540 6 -1200 l0 -1200
+1185 0 1185 0 0 910 0 910 -690 0 c-379 0 -690 4 -690 8 0 8 74 89 637 700
+l224 242 792 -2 792 -3 0 -1855z"/></g></svg>
+        <span>POBREGAMERS</span>
+      </div>
+      <div class="foot-links">
+        <a href="https://discord.gg/9GpDpHp" target="_blank" rel="noopener">Discord</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Pobregamers. Presupuesto bajo, moral alta.</span>
+      <span>Diseño <a href="https://nextdatamza.online/"><img src="./imagenes/nd.png" width="60%"></a></span>
+    </div>
+  </div>
+</footer>
+
+<audio id="audio" preload="metadata"></audio>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ======================================================
+     LISTA DE TEMAS
+     Acá cargás manualmente tus covers. Copiá y pegá un bloque
+     por cada tema nuevo, cambiando los datos.
+
+     archivo: ruta al mp3 (ej: "mp3/mi-cover.mp3")
+     titulo:  nombre de la canción
+     artista: quién la hizo (vos, o vos + banda, etc.)
+     portada: (opcional) foto de tapa PARA ESE TEMA.
+              Si la dejás vacía "", se usa la portada
+              general que pusiste en <img id="coverImg">
+     ====================================================== */
+  const TEMAS = [
+    {
+       archivo: "./covers/1.mp3",
+       titulo: "Under my Skin",
+       artista: "Trading Yesterday",
+       portada: "covers/g83.jpg"
+    },
+    {
+       archivo: "./covers/2.mp3",
+       titulo: "Daria Intro",
+       artista: "Daria",
+       portada: "./covers/g82.jpg"
+    },
+    {
+       archivo: "./covers/3.mp3",
+       titulo: "Si es por vos",
+       artista: "Everest",
+       portada: "./covers/g81.jpg"
+    },
+  ];
+
+  /* ============ PORTADA GENERAL POR DEFECTO ============ */
+  // Si querés una sola foto de álbum para todos los temas,
+  // ponela acá (se usa si un tema no trae su propia "portada").
+  const PORTADA_GENERAL = ""; // ej: "imagenes/portada.jpg"
+
+  /* ======================================================
+     A partir de acá es el motor del reproductor, no hace
+     falta tocar nada más.
+     ====================================================== */
+  const audio = document.getElementById('audio');
+  const playBtn = document.getElementById('playBtn');
+  const playIcon = document.getElementById('playIcon');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const seek = document.getElementById('seek');
+  const curTime = document.getElementById('curTime');
+  const durTime = document.getElementById('durTime');
+  const volume = document.getElementById('volume');
+  const npTitle = document.getElementById('npTitle');
+  const npArtist = document.getElementById('npArtist');
+  const coverImg = document.getElementById('coverImg');
+  const coverPh = document.getElementById('coverPh');
+  const trackList = document.getElementById('trackList');
+  const trackCount = document.getElementById('trackCount');
+
+  const ICON_PLAY = '<path d="M8 5v14l11-7z"/>';
+  const ICON_PAUSE = '<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>';
+
+  let current = -1;
+
+  function fmt(s){
+    if (!isFinite(s)) return '0:00';
+    const m = Math.floor(s / 60);
+    const sec = Math.floor(s % 60).toString().padStart(2, '0');
+    return m + ':' + sec;
+  }
+
+  function renderList(){
+    trackCount.textContent = TEMAS.length + (TEMAS.length === 1 ? ' tema' : ' temas');
+    if (TEMAS.length === 0){
+      trackList.innerHTML = '<p style="color:var(--mute); padding:20px 4px;">Todavía no hay temas cargados. Agregalos en el array TEMAS del script.</p>';
+      return;
+    }
+    trackList.innerHTML = '';
+    TEMAS.forEach(function(t, i){
+      const btn = document.createElement('button');
+      btn.className = 'track';
+      btn.setAttribute('data-idx', i);
+      btn.innerHTML =
+        '<span class="track-idx">' + String(i + 1).padStart(2, '0') + '</span>' +
+        '<div class="track-info">' +
+          '<div class="track-title">' + t.titulo + '</div>' +
+          '<div class="track-artist">' + t.artista + '</div>' +
+        '</div>' +
+        '<span class="track-dur" data-dur></span>';
+      btn.addEventListener('click', function(){ loadTrack(i, true); });
+      trackList.appendChild(btn);
+    });
+  }
+
+  function setActiveRow(i){
+    document.querySelectorAll('.track').forEach(function(el){
+      el.classList.toggle('active', Number(el.getAttribute('data-idx')) === i);
+    });
+  }
+
+  function loadTrack(i, autoplay){
+    if (i < 0 || i >= TEMAS.length) return;
+    current = i;
+    const t = TEMAS[i];
+    audio.src = t.archivo;
+    npTitle.textContent = t.titulo;
+    npArtist.textContent = t.artista;
+
+    const foto = t.portada || PORTADA_GENERAL;
+    if (foto){
+      coverImg.src = foto;
+      coverPh.style.display = 'none';
+    } else {
+      coverImg.removeAttribute('src');
+      coverPh.style.display = 'flex';
+    }
+
+    setActiveRow(i);
+
+    if (autoplay){
+      audio.play().catch(function(){});
+    }
+  }
+
+  function togglePlay(){
+    if (TEMAS.length === 0) return;
+    if (current === -1){ loadTrack(0, true); return; }
+    if (audio.paused){
+      audio.play().catch(function(){});
+    } else {
+      audio.pause();
+    }
+  }
+
+  audio.addEventListener('play', function(){
+    playIcon.innerHTML = ICON_PAUSE;
+    playBtn.setAttribute('aria-label', 'Pausar');
+  });
+  audio.addEventListener('pause', function(){
+    playIcon.innerHTML = ICON_PLAY;
+    playBtn.setAttribute('aria-label', 'Reproducir');
+  });
+  audio.addEventListener('ended', function(){
+    if (current < TEMAS.length - 1){ loadTrack(current + 1, true); }
+    else { playIcon.innerHTML = ICON_PLAY; }
+  });
+  audio.addEventListener('loadedmetadata', function(){
+    seek.max = audio.duration || 0;
+    durTime.textContent = fmt(audio.duration);
+  });
+  audio.addEventListener('timeupdate', function(){
+    seek.value = audio.currentTime;
+    curTime.textContent = fmt(audio.currentTime);
+  });
+
+  playBtn.addEventListener('click', togglePlay);
+  prevBtn.addEventListener('click', function(){
+    if (current > 0) loadTrack(current - 1, true);
+  });
+  nextBtn.addEventListener('click', function(){
+    if (current < TEMAS.length - 1) loadTrack(current + 1, true);
+  });
+  seek.addEventListener('input', function(){
+    audio.currentTime = seek.value;
+  });
+  volume.addEventListener('input', function(){
+    audio.volume = volume.value;
+  });
+  audio.volume = volume.value;
+
+  renderList();
+  if (TEMAS.length > 0){
+    npTitle.textContent = TEMAS[0].titulo;
+    npArtist.textContent = TEMAS[0].artista;
+  }
+</script>
+
+</body>
+</html>
